@@ -1,6 +1,6 @@
-require './lib/file_parser'
+#require './lib/file_parser'
 
-RSpec.describe FileParser do
+RSpec.describe LogHelper::FileParser do
   let(:valid_file_path){'spec/factories/web_dummy.log'}
   let(:invalid_file_path){'/web_dummy.rb'}
   let(:valid_result){ described_class.parse_file(valid_file_path)}
