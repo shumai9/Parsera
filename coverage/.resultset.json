@@ -1,0 +1,44 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/shumai/Desktop/job/smartpension/SP Graduate Ruby test/ruby_app/parsera/app/controllers/home_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/shumai/Desktop/job/smartpension/SP Graduate Ruby test/ruby_app/parsera/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/home/shumai/Desktop/job/smartpension/SP Graduate Ruby test/ruby_app/parsera/spec/helpers/home_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/shumai/Desktop/job/smartpension/SP Graduate Ruby test/ruby_app/parsera/spec/models/page_spec.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null
+      ]
+    },
+    "timestamp": 1562165706
+  }
+}
