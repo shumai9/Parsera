@@ -1,11 +1,11 @@
-#require './lib/file_parser'
+require 'rails_helper'
 
-RSpec.describe LogHelper::FileParser do
-  let(:valid_file_path){'spec/factories/web_dummy.log'}
-  let(:invalid_file_path){'/web_dummy.rb'}
+RSpec.describe ParseUtils::FileParser do
+  let(:valid_file_path){'spec/factories/dummy_web.log'}
+  let(:invalid_file_path){'/dummy_web.log'}
   let(:valid_result){ described_class.parse_file(valid_file_path)}
   let(:invalid_result){ described_class.parse_file(invalid_file_path)}
-  let(:empty_result){{}}
+  let(:empty_result){nil}
   let(:expected_result){{ "/about" => ["682.704.613.213", "802.683.925.780"],
     "/about/2" => ["061.945.150.735", "543.910.244.929", "184.123.665.067"],
     "/contact" => ["126.318.035.038"],"/help_page/1" => ["200.017.277.774"],
@@ -13,8 +13,8 @@ RSpec.describe LogHelper::FileParser do
     "/index" => ["336.284.013.698", "444.701.448.104"]
   }}
 
-  context "When valid file path" do
-    describe 'parse_file'  do
+  describe 'parse_file'  do
+    context "When valid file path" do
       it "Should not return nil" do
         expect(valid_result).not_to be(nil)
       end
@@ -22,10 +22,7 @@ RSpec.describe LogHelper::FileParser do
         expect(valid_result).to eq(expected_result)
       end
     end
-  end
-
-   context "When Invalid file path" do
-    describe 'parse_file'  do
+    context "When Invalid file path" do
       it "Should return nil" do
         expect(invalid_result).to eq(empty_result)
       end
