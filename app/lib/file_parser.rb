@@ -1,15 +1,16 @@
 module ParseUtils
   class FileParser
     def self.parse_file(file_path)
-      log_file = File.open(file_path) if File.exist?(file_path)   
       data = Hash.new { |hash, key| hash[key] = [] }
-      if log_file
-        log_file.each do |line| 
+      if File.exist?(file_path)
+        log_file = File.open(file_path, 'r')
+        while line = log_file.gets 
           url, ip_address = line.split(' ')
           data[url] << ip_address
-        end
+        end   
         return data
       end
+      return nil    
     end
   end
   class PageViewsAnalizer
@@ -24,7 +25,6 @@ module ParseUtils
       sorted = Hash[ view_count.sort{ 
         |k, v| opt ? v[1] <=> k[1] : k[1] <=> v[1] 
       }]
-      p sorted
     end
   end
 end
