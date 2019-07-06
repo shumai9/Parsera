@@ -1,4 +1,6 @@
 # README
+#Parsera
+As part of Smartpension Graduate Ruby test, Parsera is a simple log file(specific format) parser that consumes log files and creates metrics such as counting and sorting.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
