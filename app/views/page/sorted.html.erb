@@ -1,8 +1,26 @@
-<h1>Page visit Sorted</h1>
-<% sorted.map do |k, v| %>
-  <li id="sorted"><%= k %> :- <%= v %></li>
-<%end%>
-<h4>Unique page views </h4>
-<% unique.map do |k, v| %>
-  <li id="unique"><%= k %> :- <%= v %></li>
-<%end%>
+<table>
+<h1>List of page visits in descending order</h1>
+  <tr>
+    <th>Path</th>
+    <th>Total Count</th>
+  </tr>
+  <% sorted.map do |k, v| %>
+    <tr id="sorted">
+      <td >"<%= k %>"</td>
+      <td> <%= v %></td>
+    </tr>
+  <%end%>
+</table>
+<table>
+  <h1>List of unique page views </h1>
+  <tr>
+    <th>Path</th>
+    <th>Total Count</th>
+  </tr>
+  <% unique.map do |k, v| %>
+    <tr id="unique">
+      <td >"<%= k %>"</td>
+      <td ><%= v %></td>
+    </tr>
+  <%end%>
+</table>

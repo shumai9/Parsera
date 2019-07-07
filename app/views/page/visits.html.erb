@@ -1,4 +1,13 @@
+<table>
 <h1>Page visit count</h1>
-<% page_count.map do |k, v| %>
-  <li><%= k %> :- <%= v %></li>
-<%end%>
+  <tr>
+    <th>Path</th>
+    <th>Total Count</th>
+  </tr>
+  <% page_count.map do |k, v| %>
+    <tr id="visit">
+      <td >"<%= k %>"</td>
+      <td> <%= v %></td>
+    </tr>
+  <%end%>
+</table>

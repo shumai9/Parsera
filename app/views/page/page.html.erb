@@ -1,4 +1,9 @@
-<h1>LOG Parsed</h1>
-<% parsed_result.each do |url| %>
-  <li><%= url %></li>
-<%end%>
+<h1>PARSED LOG FILE</h1>
+<ul id="parsed">
+  <% parsed_result.map do |url, ip| %>
+    <li>Path  "<%= url %> "</li>
+    <% ip.each do |i| %>
+      <span>{<%= i %> },</span>
+    <%end%>
+  <%end%>
+<ul>
