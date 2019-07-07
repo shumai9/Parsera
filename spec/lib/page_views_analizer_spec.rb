@@ -6,15 +6,11 @@ RSpec.describe ParseUtils::PageViewsAnalizer do
   let(:page_count){described_class.count_page_views(valid_parsed_data)}
   let(:desc_sorted_views){described_class.sort_page_views(page_count, opt = true)}
   let(:asce_sorted_views){described_class.sort_page_views(page_count, opt = false)}
+  let(:unique_sorted_views){described_class.filter_unique_views(desc_sorted_views)}
 
-  let(:expected_result){{
-    "/about/2" => 3,
-    "/home" => 3,
-    "/about" => 2,
-    "/index" => 2,
-    "/contact" => 1,
-    "/help_page/1" => 1
-  }}
+  let(:expected_result){{"/about/2" => 3,"/home" => 3,"/about" => 2,
+                        "/index" => 2,"/contact" => 1,"/help_page/1" => 1}}
+  let(:unique_views){{"/about/2" => 3, "/help_page/1" => 1}}
 
   describe 'count_page_views'  do
     context "When valid parsed data" do
@@ -38,16 +34,12 @@ RSpec.describe ParseUtils::PageViewsAnalizer do
       end
     end
   end
-
-  #  context "When Invalid file path" do
-  #   describe 'parse_file'  do
-  #     it "Should return nil" do
-  #       expect(invalid_result).to eq(empty_result)
-  #     end
-  #     it "Should return hash object" do
-  #       expect(invalid_result).to eq(empty_result)
-  #     end
-  #   end
-  # end
+  describe 'filter unique views' do
+    context "Given count of page_views" do
+      it"Should return uniqe page_views only"do
+        expect(unique_sorted_views).to match(unique_views)
+      end
+    end
+  end
 end
 

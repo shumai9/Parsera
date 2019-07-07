@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-07-06T17:03:48+01:00">2019-07-06T17:03:48+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-07-07T09:20:28+01:00">2019-07-07T09:20:28+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.76%</span></span>
+    (<span class="covered_percent"><span class="green">90.91%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.33
+         1.38
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>68</b> relevant lines. 
-    <span class="green"><b>59</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed </span>
+    <b>77</b> relevant lines. 
+    <span class="green"><b>70</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#578f82b1320873b5524e91613dcfe24315d8eaa8" class="src_link" title="app/controllers/page_controller.rb">app/controllers/page_controller.rb</a></td>
-        <td class="red strong">30.77 %</td>
-        <td>17</td>
-        <td>13</td>
-        <td>4</td>
+        <td class="red strong">56.25 %</td>
+        <td>26</td>
+        <td>16</td>
         <td>9</td>
-        <td>0.3</td>
+        <td>7</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -83,7 +83,7 @@
       <tr>
         <td class="strong"><a href="#6aa0c06e77dd2c923b5832d5d728619e6e92a039" class="src_link" title="app/models/page.rb">app/models/page.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>4</td>
+        <td>3</td>
         <td>2</td>
         <td>2</td>
         <td>0</td>
@@ -113,9 +113,9 @@
       <tr>
         <td class="strong"><a href="#75752a03121a6aac638fa0a1bf3f6f393ad1293a" class="src_link" title="spec/lib/page_views_analizer_spec.rb">spec/lib/page_views_analizer_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>53</td>
-        <td>21</td>
-        <td>21</td>
+        <td>45</td>
+        <td>27</td>
+        <td>27</td>
         <td>0</td>
         <td>1.8</td>
       </tr>
@@ -192,11 +192,11 @@
         <div class="source_table" id="578f82b1320873b5524e91613dcfe24315d8eaa8">
   <div class="header">
     <h3>app/controllers/page_controller.rb</h3>
-    <h4><span class="red">30.77 %</span> covered</h4>
+    <h4><span class="red">56.25 %</span> covered</h4>
     <div>
-      <b>13</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
   
@@ -218,79 +218,79 @@
         <li class="missed" data-hits="0" data-linenumber="3">
           
           
-          <code class="ruby">    @res = FileParser.parse_file(&#39;log/webserver.log&#39;)</code>
+          <code class="ruby">    render(&#39;page&#39;, :locals =&gt; {parsed_result: parsed_result})</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
-          
-          <code class="ruby">    render(&#39;page&#39;, :locals =&gt; @res )</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">  def show_count</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="missed" data-hits="0" data-linenumber="6">
           
           
-          <code class="ruby">    @res = FileParser.parse_file(&#39;log/webserver.log&#39;)</code>
+          <code class="ruby">    render(&#39;visits&#39;, :locals =&gt; {page_count: view_count})</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">    @view_counts = PageViewsAnalizer.count_page_views(@res)    </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
-          
-          <code class="ruby">    render(&#39;visits&#39;, :locals =&gt; @view_counts)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  def sort_views</code>
+          <code class="ruby">  def sort_views    </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">    @res = FileParser.parse_file(&#39;log/webserver.log&#39;)</code>
+          <code class="ruby">    render(&#39;sorted&#39;, :locals =&gt; {sorted: sorted_page_views,</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">    @view_counts = PageViewsAnalizer.count_page_views(@res)</code>
+          <code class="ruby">      unique: unique_views})</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">    @sorted_views = PageViewsAnalizer.sort_page_views(@view_counts)</code>
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def parsed_result</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">    render(&#39;sorted&#39;, :locals =&gt; @sorted_views)</code>
+          <code class="ruby">    FileParser.parse_file(&#39;log/webserver.log&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -299,7 +299,61 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def view_count</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">    PageViewsAnalizer.count_page_views(parsed_result)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def sorted_page_views</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">    PageViewsAnalizer.sort_page_views(view_count)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def unique_views</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">    PageViewsAnalizer.filter_unique_views(sorted_page_views)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -367,19 +421,13 @@
           <code class="ruby">class Page &lt; ApplicationRecord</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby">  #webpage makes more sense</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
           <code class="ruby">  validates_presence_of :url,:ip_address, :page_id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
@@ -727,8 +775,8 @@
     <h3>spec/lib/page_views_analizer_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>27</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -754,26 +802,26 @@
           <code class="ruby">RSpec.describe ParseUtils::PageViewsAnalizer do</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="4">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="4">
+          <span class="hits">6</span>
           
           <code class="ruby">  let(:valid_file_path){&#39;spec/factories/dummy_web.log&#39;}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="5">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="5">
+          <span class="hits">6</span>
           
           <code class="ruby">  let(:valid_parsed_data){ParseUtils::FileParser.parse_file(valid_file_path)}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">  let(:page_count){described_class.count_page_views(valid_parsed_data)}</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">  let(:desc_sorted_views){described_class.sort_page_views(page_count, opt = true)}</code>
         </li>
@@ -784,271 +832,223 @@
           <code class="ruby">  let(:asce_sorted_views){described_class.sort_page_views(page_count, opt = false)}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:unique_sorted_views){described_class.filter_unique_views(desc_sorted_views)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="10">
+        <li class="covered" data-hits="4" data-linenumber="11">
           <span class="hits">4</span>
           
-          <code class="ruby">  let(:expected_result){{</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">    &quot;/about/2&quot; =&gt; 3,</code>
+          <code class="ruby">  let(:expected_result){{&quot;/about/2&quot; =&gt; 3,&quot;/home&quot; =&gt; 3,&quot;/about&quot; =&gt; 2,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">    &quot;/home&quot; =&gt; 3,</code>
+          <code class="ruby">                        &quot;/index&quot; =&gt; 2,&quot;/contact&quot; =&gt; 1,&quot;/help_page/1&quot; =&gt; 1}}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    &quot;/about&quot; =&gt; 2,</code>
+          <code class="ruby">  let(:unique_views){{&quot;/about/2&quot; =&gt; 3, &quot;/help_page/1&quot; =&gt; 1}}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">    &quot;/index&quot; =&gt; 2,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">    &quot;/contact&quot; =&gt; 1,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">    &quot;/help_page/1&quot; =&gt; 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">  }}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">  describe &#39;count_page_views&#39;  do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    context &quot;When valid parsed data&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;Should not return nil&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(valid_parsed_data).not_to be(nil)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;should return obj with number of views #path =&gt; count&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(page_count).to eq(expected_result)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  describe &#39;sort_page_views&#39;  do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">    context &quot;Given count of page_views with Desc = true&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">      it&quot;sorts page views in descending order&quot;do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(desc_sorted_views).to match(expected_result)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
           <code class="ruby">    context &quot;Given count of page_views with Desc = false&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">      it&quot;sorts page views in Ascending order&quot;do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(asce_sorted_views).to match(expected_result)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">  end</code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;filter unique views&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &quot;Given count of page_views&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it&quot;Should return uniqe page_views only&quot;do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(unique_sorted_views).to match(unique_views)</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">  #  context &quot;When Invalid file path&quot; do</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  #   describe &#39;parse_file&#39;  do</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">  #     it &quot;Should return nil&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby">  #       expect(invalid_result).to eq(empty_result)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby">  #     end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">  #     it &quot;Should return hash object&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">  #       expect(invalid_result).to eq(empty_result)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
-          
-          
-          <code class="ruby">  #     end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby"></code>

@@ -1,4 +1,8 @@
 <h1>Page visit Sorted</h1>
-<% @sorted_views.map do |k, v| %>
-  <li><%= k %> :- <%= v %></li>
+<% sorted.map do |k, v| %>
+  <li id="sorted"><%= k %> :- <%= v %></li>
+<%end%>
+<h4>Unique page views </h4>
+<% unique.map do |k, v| %>
+  <li id="unique"><%= k %> :- <%= v %></li>
 <%end%>
